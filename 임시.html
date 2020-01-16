@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <ul id="list">
+        <li>empty</li>
+        <li>empty</li>
+        <li>empty</li>
+        <li>empty</li>
+    </ul>
+    <input id="execute_btn" type="button" value="execute" />
+    <script type="text/javascript">
+    function addEvent(target, eventType,eventHandler, useCapture) {
+        if (target.addEventListener) { // W3C DOM
+            target.addEventListener(eventType,eventHandler,useCapture?useCapture:false);
+        } else if (target.attachEvent) {  // IE DOM
+            var r = target.attachEvent("on"+eventType, eventHandler);
+        }
+    }
+    function clickHandler(event) {
+        var nav = document.getElementById('list');
+        for(var i = 0; i < nav.childNodes.length; i++) {
+            var child = nav.childNodes[i];
+            if(child.nodeType==3)
+                continue;
+            child.innerText = 'Coding everybody';
+        }
+    }
+    addEvent(document.getElementById('execute_btn'), 'click', clickHandler);
+    </script>
+</body>
+</html>
+
+
+<tr class="" data-team-id="304"><td class="o"><span class="box standing-zone-top-1">1</span></td><td class="team"><a class="team-link " title="" href="/Teams/304/Show/France-Paris-Saint-Germain">Paris Saint-Germain</a></td><td class="p">20</td><td class="w">16</td><td class="d">1</td><td class="l">3</td><td class="gf">50</td><td class="ga">14</td><td class="gd">+36</td><td class="pts">49</td><td id="form-values" class="form"><a class="box w h 0" href="/Matches/1376616/Live/France-Ligue-1-2019-2020-Paris-Saint-Germain-Nantes" title="Paris Saint-Germain 2-0 Nantes">w</a><a class="box w h 1" href="/Matches/1376628/Live/France-Ligue-1-2019-2020-Montpellier-Paris-Saint-Germain" title="Montpellier 1-3 Paris Saint-Germain">w</a><a class="box w h 1" href="/Matches/1376806/Live/France-Ligue-1-2019-2020-Saint-Etienne-Paris-Saint-Germain" title="Saint-Etienne 0-4 Paris Saint-Germain">w</a><a class="box w h 0" href="/Matches/1376854/Live/France-Ligue-1-2019-2020-Paris-Saint-Germain-Amiens" title="Paris Saint-Germain 4-1 Amiens">w</a><a class="box d h 0" href="/Matches/1376864/Live/France-Ligue-1-2019-2020-Paris-Saint-Germain-Monaco" title="Paris Saint-Germain 3-3 Monaco">d</a><a class="box w h 1" href="/Matches/1376578/Live/France-Ligue-1-2019-2020-Monaco-Paris-Saint-Germain" title="Monaco 1-4 Paris Saint-Germain">w</a></td></tr>

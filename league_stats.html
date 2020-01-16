@@ -118,6 +118,26 @@
     cursor: pointer;
     display: block;
   }
+
+  table{
+    margin: 0;
+    width: 600px;
+}
+
+thead{
+    background-color: rgb(100,180,80)
+}
+tr{border: 1px black; color: black;
+font-size: 20px;
+text-align: center;
+
+
+}
+td th{
+    width: 100px;
+height: 10px;
+}
+
   .desc {
     max-height: 0;
     overflow: hidden;
@@ -125,6 +145,7 @@
   }
   .desc > div {
     margin: 10px;
+    border-color: black;
   }
   .list-checkbox:checked + .title + .desc {
     max-height: 1000px;
@@ -161,121 +182,80 @@
     <br></br>
     <br></br>
 
-<ul class="list"  style="font-family: 'Gothic A1'; margin-left: 50px;">
-      <li>
-        <input
-          type="radio"
-          name="list"
-          class="list-checkbox"
-          id="list-input1"
-          checked
-        />
-        <label for="list-input1" class="title">프리미어리그</label>
-        <div class="desc">
-          <div>
-            score
-          </div>
-        </div>
-      </li>
-      <li>
-        <input
-          type="radio"
-          name="list"
-          class="list-checkbox"
-          id="list-input2"
-        />
-        <label for="list-input2" class="title">라리가</label>
-        <div class="desc">
-          <div>
-            score
-          </div>
-        </div>
-      </li>
-      <li>
-        <input
-          type="radio"
-          name="list"
-          class="list-checkbox"
-          id="list-input3"
-        />
-        <label for="list-input3" class="title">분데스리가</label>
-        <div class="desc">
-          <div>
-            score
-          </div>
-        </div>
-      </li>
-      <li>
-        <input
-          type="radio"
-          name="list"
-          class="list-checkbox"
-          id="list-input4"
-        />
-        <label for="list-input4" class="title">세리에A</label>
-        <div class="desc">
-          <div>
-            score
-          </div>
-        </div>
-      </li>
-      <li>
-        <input
-          type="radio"
-          name="list"
-          class="list-checkbox"
-          id="list-input5"
-        />
-        <label for="list-input5" class="title"></label>
-        <div class="desc">
-          <div>
-            score
-          </div>
-        </div>
-      </li>
-      <li>
-        <input
-          type="radio"
-          name="list"
-          class="list-checkbox"
-          id="list-input5"
-        />
-        <label for="list-input5" class="title"></label>
-        <div class="desc">
-          <div>
-            score
-          </div>
-        </div>
-      </li>
-      <li>
-        <input
-          type="radio"
-          name="list"
-          class="list-checkbox"
-          id="list-input5"
-        />
-        <label for="list-input5" class="title"></label>
-        <div class="desc">
-          <div>
-            score
-          </div>
-        </div>
-      </li>
-      <li>
-        <input
-          type="radio"
-          name="list"
-          class="list-checkbox"
-          id="list-input5"
-        />
-        <label for="list-input5" class="title"></label>
-        <div class="desc">
-          <div>
-            score
-          </div>
-        </div>
-      </li>
-    </ul>
+    <div id="p1"><img src ="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAACuCAMAAAClZfCTAAAAFVBMVEX////NICzLABXtv8HtwsTMDh/hkJOQTrJjAAABiUlEQVR4nO3asQ3DMBAEQVqk1H/JdgcTPgTvVHDY+Naata8PXHt44rQSUYmoRFQiKhGViEpEJaISUYmoRFQiKhGViEpEJaISUYmoRFQiKhGViEpEJaISUYmoRFQiKhGViEpEJaISUYmoRFQiKhGViEpEJaISUYmoRFQiKhGViEpEJaISUYmoRFQiKhGViEpEJaISUYmoRFQiKhGViEpEJaISUYmoRHSc6Exv3KPOcyvR/ZzZjeuaxUK/RsMTlyf+uxJRiahEVCIqEZWISkQlohJRiahEVCIqEZWISkQlohJRiahEVCIqEZWISkQlohJRiahEVCIqEZWISkRdsKgjH01fLd9wBx3WqZhKRCWiElGJqERUIioRlYhKRCWiElGJqERUIioRlYhKRCWiElGJqERUIioRlYhKRCWiElGJqERUIioRlYhKRCWiElGJqERUIioRlYhKRCWiElGJqERUIioRlYhKRCWiElGJqERUIioRlYhKRCWiElGJqERUIioRlYhKRCWiFyT6AlXQRZ39U6PdAAAAAElFTkSuQmCC" alt="England" width="80" height="35">프리미어리그 순위</div>
+    <div style="margin-left :50px">
+    <table>
+      <thead>
+        <tr>
+          <th style="width :50px">순위</th>
+          <th>팀명</th>
+          <th>경기수</th>
+          <th>승</th>
+          <th>무</th>
+          <th>패</th>
+          <th>골득실</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>#1</td>
+          <td><a class="ban" href="https://van1164.github.io/soccer/리버풀">리버풀</a></td>
+          <td>21</td>
+          <td>20</td>
+          <td>1</td>
+          <td>0</td>
+          <td>+36</td>
+        </tr>
+        <tr>
+          <td>#2</td>
+          <td><a class="ban" href="https://van1164.github.io/soccer/호날두">메시</a></td>
+          <td>바르셀로나</td>
+        </tr>
+        <tr>
+          <td>#3</td>
+          <td><a class="ban" href="https://van1164.github.io/soccer/호날두">네이마르</a></td>
+          <td>바르셀로나</td>
+        </tr>
+        <tr>
+          <td>#4</td>
+          <td><a class="ban" href="https://van1164.github.io/soccer/호날두">부폰</a></td>
+          <td>유벤투스</td>
+        </tr>
+        <tr>
+          <td>#5</td>
+          <td><a class="ban" href="https://van1164.github.io/soccer/호날두">모드리치</a></td>
+          <td>유벤투스</td>
+        </tr>
+        <tr>
+          <td>#6</td>
+          <td><a class="ban" href="https://van1164.github.io/soccer/호날두">라모스</a></td>
+          <td>유벤투스</td>
+        </tr>
+        <tr>
+          <td>#7</td>
+          <td><a class="ban" href="https://van1164.github.io/soccer/호날두">음바페</a></td>
+          <td>유벤투스</td>
+        </tr>
+        <tr>
+          <td>#8</td>
+          <td><a class="ban" href="https://van1164.github.io/soccer/호날두">캉테</a></td>
+          <td>유벤투스</td>
+          </tr>
+          <tr>
+            <td>#9</td>
+            <td><a class="ban" href="https://van1164.github.io/soccer/호날두">레반도프스키</a></td>
+            <td>유벤투스</td>
+          </tr>
+
+          <tr>
+              <td>#10</td>
+              <td><a class="ban" href="https://van1164.github.io/soccer/호날두">케인</a></td>
+              <td>유벤투스</td>
+            </tr>
+          
+      </tbody>
+    </table>
+  </div>
     
 
 
