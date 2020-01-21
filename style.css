@@ -1,0 +1,414 @@
+@charset "utf-8"
+ 
+/* 모든 Device를 위한 공통 로드 */
+ 
+
+/* 모바일 Device : 0 ~ 640 */
+@media screen and (max-width: 640px){
+ 
+    body{
+        background-color: white;
+        margin-left: 3%;
+        margin-top: 3%;
+    }
+
+
+    a:visited{
+      text-decoration: none;
+      color: rgb(120,120,120);
+    }
+    a:link{
+      text-decoration: none;
+      color: black;
+    }
+    a:hover{
+      color: rgb(120,120,120);
+    }
+
+
+    #logo{
+        text-align: left;
+        font-size: 70px;
+        color: black;
+        width: 20%;
+        line-height: 1.8;
+        font-family: 'Nanum Pen Script', cursive;
+        margin-left:35px;
+        display: inline-block;
+    }
+
+    #nav_banner ul li{
+        list-style: none;
+        float: left;
+        border: 1 solid rgb(255,255,255);
+        text-align: center;
+        line-height: 2;
+        font-size:20px;
+        color: rgb(90,200,100);
+        text-decoration: none;
+        width: 300px;
+        height: 30px;
+    }
+
+    #nav_banner .ban{
+        text-decoration: none;
+        color: black;
+        line-height: 2;
+        background-color: rgb(100,180,80);
+        font-family: 'Gothic A1', Courier, monospace;
+        display: block;
+
+    }
+    #nav_banner .ban:hover{
+      line-height: 2;
+        background-color: rgb(140,220,100);
+
+    }
+
+    #p1{font-size: 35px;
+        text-align: left;
+        margin-left: 50px;
+        margin-top: 15px;
+        font-family: 'Poor story', cursive;
+        }
+
+    #p2{color: black;
+      line-height: 2;
+      position: static;
+      text-align: center;
+      font-family: 'Gothic A1', Courier, monospace;
+      font-size: 22px;
+      }
+
+  .checkbox {
+    display: none;
+  }
+
+  .checkbox:checked + .title + .desc {
+    max-height: 1000px;
+  }
+
+  .list {
+    list-style: none;
+    padding: 0;
+  }
+  .list > li {
+    padding: 0;
+  }
+  .list-checkbox {
+    display: none;
+  }
+  .title {
+    font-size: 22px;
+    padding: 10px;
+    margin: 0;
+    border-top: 1px solid #ddd;
+    background: #f4f4f4;
+    cursor: pointer;
+    display: block;
+  }
+
+  table{
+    margin: 0;
+    width: 600px;
+}
+#right{
+    height: 700px;
+    width: 400px;
+    margin-left: 598px;
+    margin-top: 0;
+
+}
+
+thead{
+    background-color: rgb(100,180,80)
+}
+tr{border: 1px black; color: black;
+font-size: 20px;
+text-align: center;
+
+
+}
+td th{
+    width: 100px;
+height: 10px;
+border-color: black;
+border-width: 1px;
+border: 1px black;
+text-align: left;
+}
+ 
+}
+ 
+/* Tablet Device : 641 ~ 768 */
+@media screen and (min-width:641px){
+ 
+  body{
+    background-color: white;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+
+
+a:visited{
+  text-decoration: none;
+  color: rgb(120,120,120);
+}
+a:link{
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  color: rgb(120,120,120);
+}
+
+
+#logo{
+    text-align: left;
+    font-size: 70px;
+    color: black;
+    width: 20%;
+    line-height: 1.8;
+    font-family: 'Nanum Pen Script', cursive;
+    margin-left:35px;
+    display: inline-block;
+}
+
+#nav_banner ul li{
+    list-style: none;
+    float: left;
+    border: 1 solid rgb(255,255,255);
+    text-align: center;
+    line-height: 2;
+    font-size:20px;
+    color: rgb(90,200,100);
+    text-decoration: none;
+    width: 300px;
+    height: 30px;
+}
+
+#nav_banner .ban{
+    text-decoration: none;
+    color: black;
+    line-height: 2;
+    background-color: rgb(100,180,80);
+    font-family: 'Gothic A1', Courier, monospace;
+    display: block;
+
+}
+#nav_banner .ban:hover{
+  line-height: 2;
+    background-color: rgb(140,220,100);
+
+}
+
+#p1{font-size: 35px;
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 15px;
+    font-family: 'Poor story', cursive;
+    }
+
+#p2{color: black;
+  line-height: 2;
+  position: static;
+  text-align: center;
+  font-family: 'Gothic A1', Courier, monospace;
+  font-size: 22px;
+  }
+
+.checkbox {
+display: none;
+}
+
+.checkbox:checked + .title + .desc {
+max-height: 1000px;
+}
+
+.list {
+list-style: none;
+padding: 0;
+}
+.list > li {
+padding: 0;
+}
+.list-checkbox {
+display: none;
+}
+.title {
+font-size: 22px;
+padding: 10px;
+margin: 0;
+border-top: 1px solid #ddd;
+background: #f4f4f4;
+cursor: pointer;
+display: block;
+}
+
+table{
+margin: 0;
+width: 600px;
+}
+#right{
+height: 700px;
+width: 400px;
+margin-left: 598px;
+margin-top: 0;
+
+}
+
+thead{
+background-color: rgb(100,180,80)
+}
+tr{border: 1px black; color: black;
+font-size: 20px;
+text-align: center;
+
+
+}
+td th{
+width: 100px;
+height: 10px;
+border-color: black;
+border-width: 1px;
+border: 1px black;
+text-align: left;
+}
+ 
+}
+ 
+/* Desktop Device : 1024 이상 */
+@media screen and (min-width:1024px){
+    body{
+        background-color: white;
+        margin-left: 3%;
+        margin-top: 3%;
+    }
+
+
+    a:visited{
+      text-decoration: none;
+      color: rgb(120,120,120);
+    }
+    a:link{
+      text-decoration: none;
+      color: black;
+    }
+    a:hover{
+      color: rgb(120,120,120);
+    }
+
+
+    #logo{
+        text-align: left;
+        font-size: 70px;
+        color: black;
+        width: 20%;
+        line-height: 1.8;
+        font-family: 'Nanum Pen Script', cursive;
+        margin-left:35px;
+        display: inline-block;
+    }
+
+    #nav_banner ul li{
+        list-style: none;
+        float: left;
+        border: 1 solid rgb(255,255,255);
+        text-align: center;
+        line-height: 2;
+        font-size:20px;
+        color: rgb(90,200,100);
+        text-decoration: none;
+        width: 300px;
+        height: 30px;
+    }
+
+    #nav_banner .ban{
+        text-decoration: none;
+        color: black;
+        line-height: 2;
+        background-color: rgb(100,180,80);
+        font-family: 'Gothic A1', Courier, monospace;
+        display: block;
+
+    }
+    #nav_banner .ban:hover{
+      line-height: 2;
+        background-color: rgb(140,220,100);
+
+    }
+
+    #p1{font-size: 35px;
+        text-align: left;
+        margin-left: 50px;
+        margin-top: 15px;
+        font-family: 'Poor story', cursive;
+        }
+
+    #p2{color: black;
+      line-height: 2;
+      position: static;
+      text-align: center;
+      font-family: 'Gothic A1', Courier, monospace;
+      font-size: 22px;
+      }
+
+  .checkbox {
+    display: none;
+  }
+
+  .checkbox:checked + .title + .desc {
+    max-height: 1000px;
+  }
+
+  .list {
+    list-style: none;
+    padding: 0;
+  }
+  .list > li {
+    padding: 0;
+  }
+  .list-checkbox {
+    display: none;
+  }
+  .title {
+    font-size: 22px;
+    padding: 10px;
+    margin: 0;
+    border-top: 1px solid #ddd;
+    background: #f4f4f4;
+    cursor: pointer;
+    display: block;
+  }
+
+  table{
+    margin: 0;
+    width: 600px;
+}
+#right{
+    height: 700px;
+    width: 400px;
+    margin-left: 598px;
+    margin-top: 0;
+
+}
+
+thead{
+    background-color: rgb(100,180,80)
+}
+tr{border: 1px black; color: black;
+font-size: 20px;
+text-align: center;
+
+
+}
+td th{
+    width: 100px;
+height: 10px;
+border-color: black;
+border-width: 1px;
+border: 1px black;
+text-align: left;
+}
+ 
+}
