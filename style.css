@@ -436,7 +436,9 @@ margin: 0px;
   text-align: left;
   font-family: 'Poor story', cursive;
 }
-
+#pp{
+  margin: auto;
+}
 
   table{
     margin: 0;
