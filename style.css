@@ -393,7 +393,7 @@ width: 100%;
 margin: 0px;
 }
 
-#league{font-size: 35px;
+#league_pre{font-size: 35px;
   text-align: left;
   margin-left: 0px;
   height: 100px;
@@ -402,6 +402,34 @@ margin: 0px;
   background-color: white;
   
   }
+
+  #league_la{font-size: 35px;
+    text-align: left;
+    margin-left: 0px;
+    height: 100px;
+    font-family: 'Poor story', cursive;
+    width: 350px;
+    background-color: white;
+    }
+
+    #league_bun{font-size: 35px;
+      text-align: left;
+      margin-left: 0px;
+      height: 100px;
+      font-family: 'Poor story', cursive;
+      width: 350px;
+      background-color: white;
+      }
+
+    #league_ser{font-size: 35px;
+        text-align: left;
+        margin-left: 0px;
+        height: 100px;
+        font-family: 'Poor story', cursive;
+        width: 350px;
+        background-color: white;
+        }
+
   #league button:hover{
     background-color: rgb(90,200,100);
   }
