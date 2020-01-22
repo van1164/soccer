@@ -277,6 +277,10 @@ text-align: left;
  
 }
  
+
+
+
+
 /* Desktop Device : 1024 이상 */
 @media screen and (min-width:1024px){
     body{
@@ -340,8 +344,8 @@ text-align: left;
 
     #p1{font-size: 35px;
         text-align: left;
-        margin-left: 50px;
-        margin-top: 15px;
+        margin-left: 0px;
+        margin-top: 10px;
         font-family: 'Poor story', cursive;
         }
 
@@ -380,6 +384,61 @@ text-align: left;
     cursor: pointer;
     display: block;
   }
+
+.league-list{
+  list-style-type: none;
+  list-style: none;
+  border: black 1px;
+width: 100%;
+margin: 0px;
+}
+
+#league{font-size: 35px;
+  text-align: left;
+  margin-left: 0px;
+  height: 100px;
+  font-family: 'Poor story', cursive;
+  width: 350px;
+  background-color: white;
+  
+  }
+  #league button:hover{
+    background-color: rgb(90,200,100);
+  }
+  #table_top{
+    font-size: 35px;
+    float: right;
+    margin-right: 48%;
+    text-align: left;
+    font-family: 'Poor story', cursive;
+  }
+
+  #table_top_laliga{
+    font-size: 35px;
+    float: right;
+    margin-right: 53%;
+    text-align: left;
+    font-family: 'Poor story', cursive;
+  }
+
+  #table_top_bun{
+    font-size: 35px;
+    float: right;
+    margin-right: 50%;
+    text-align: left;
+    font-family: 'Poor story', cursive;
+}
+
+#table_top_ser{
+  font-size: 35px;
+  float: right;
+  margin-right: 52%;
+  text-align: left;
+  font-family: 'Poor story', cursive;
+}
+#pp{
+  margin: auto;
+}
 
   table{
     margin: 0;
