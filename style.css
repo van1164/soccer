@@ -357,6 +357,7 @@ text-align: left;
       font-size: 22px;
       }
 
+
   .checkbox {
     display: none;
   }
@@ -385,48 +386,55 @@ text-align: left;
     display: block;
   }
 
-.league-list{
+
+  
+.league-list {
   list-style-type: none;
   list-style: none;
   border: black 1px;
 width: 100%;
 margin: 0px;
+line-height: 2;
 }
 
-#league_pre{font-size: 35px;
+
+
+#league_pre{font-size: 25px;
   text-align: left;
   margin-left: 0px;
-  height: 100px;
+  height: 80px;
   font-family: 'Poor story', cursive;
-  width: 350px;
+  width: 270px;
   background-color: white;
-  
+  float: left;
   }
 
-  #league_la{font-size: 35px;
+  #league_la{font-size: 25px;
     text-align: left;
     margin-left: 0px;
-    height: 100px;
+    height: 80px;
     font-family: 'Poor story', cursive;
-    width: 350px;
+    width: 230px;
     background-color: white;
+    float: left;
     }
 
-    #league_bun{font-size: 35px;
+    #league_bun{font-size: 25px;
       text-align: left;
       margin-left: 0px;
-      height: 100px;
+      height: 80px;
       font-family: 'Poor story', cursive;
-      width: 350px;
+      width: 270px;
       background-color: white;
+      float: left;
       }
 
-    #league_ser{font-size: 35px;
+    #league_ser{font-size: 25px;
         text-align: left;
         margin-left: 0px;
-        height: 100px;
+        height: 80px;
         font-family: 'Poor story', cursive;
-        width: 350px;
+        width: 230px;
         background-color: white;
         }
 
@@ -435,10 +443,9 @@ margin: 0px;
   }
   #table_top{
     font-size: 35px;
-    float: right;
-    margin-right: 48%;
     text-align: left;
     font-family: 'Poor story', cursive;
+    margin-left: 45px;
   }
 
   #table_top_laliga{
@@ -469,7 +476,7 @@ margin: 0px;
 }
 
   table{
-    margin: 0;
+    margin-left: 0px;
     width: 600px;
 }
 #right{
