@@ -502,8 +502,29 @@ border-width: 1px;
 border: 1px black;
 text-align: left;
 }
-
-
+#uefac{
+  background-color: rgb(127, 180, 255)
+}
+#uefac2{
+  background-color: rgb(127, 200, 255)
+}
+#uefac3{
+  background-color: rgb(127, 220, 255)
+}
+#uefac4{
+  background-color: rgb(127, 230, 255)
+}
+#uefau{
+  background-color: 	#FFA500;
+}
+#uefau2{
+  background-color: 	#FF8C00;
+}
+#relegation{
+  background-color:	#FF4500;
+  color: white;
+  
+}
 
 
  
