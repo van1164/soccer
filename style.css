@@ -441,33 +441,31 @@ line-height: 2;
   #league button:hover{
     background-color: rgb(90,200,100);
   }
+#px{
+margin-left: 50px;
+
+}
+
   #table_top{
     font-size: 35px;
     text-align: left;
     font-family: 'Poor story', cursive;
-    margin-left: 45px;
   }
 
   #table_top_laliga{
     font-size: 35px;
-    float: right;
-    margin-right: 53%;
     text-align: left;
     font-family: 'Poor story', cursive;
   }
 
   #table_top_bun{
     font-size: 35px;
-    float: right;
-    margin-right: 50%;
     text-align: left;
     font-family: 'Poor story', cursive;
 }
 
 #table_top_ser{
   font-size: 35px;
-  float: right;
-  margin-right: 52%;
   text-align: left;
   font-family: 'Poor story', cursive;
 }
@@ -504,5 +502,9 @@ border-width: 1px;
 border: 1px black;
 text-align: left;
 }
+
+
+
+
  
 }
