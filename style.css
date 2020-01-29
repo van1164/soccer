@@ -488,7 +488,7 @@ margin-left: 50px;
 thead{
     background-color: rgb(100,180,80)
 }
-tr{border: 1px black; color: black;
+tr{
 font-size: 20px;
 text-align: center;
 
@@ -498,7 +498,7 @@ td th{
     width: 100px;
 height: 10px;
 border-width: 1px;
-
+border-color: white;
 text-align: left;
 }
 #uefac{
