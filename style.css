@@ -544,12 +544,19 @@ text-align: left;
   margin-left: 30px;
   height: 800px;
 }
+
+#player_stata{
+  float: left;
+  margin-left: 30px;
+  height: 400px;
+}
+
 #px{
   width: 80%;
 }
 #papa{
   width: 400px;
-  height: 1000px;
+  height: 400px;
   
 }
 #lala{
