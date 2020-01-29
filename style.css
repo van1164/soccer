@@ -450,6 +450,7 @@ margin-left: 50px;
     font-size: 35px;
     text-align: left;
     font-family: 'Poor story', cursive;
+    width: fit-content;
   }
 
   #table_top_laliga{
@@ -526,7 +527,18 @@ text-align: left;
 }
 #player_stats{
   float: left;
+  margin-left: 30px;
 }
-
+#px{
+  width: 80%;
+}
+#papa{
+  width: 400px;
+  
+}
+#lala{
+  width: 40%;
+  float: left;
+}
  
 }
