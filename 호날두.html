@@ -45,19 +45,73 @@
     float: left;
   }
 .table_juv{
-    margin-left:150px;
-    width:750px;
+    margin-left:40px;
+    width:600px;
+    height:30px;
+    border-collapse:separate;
+    border-spacing:0px;
+    line-height:50px;
+}
+.sum_tab{
+    width:450px;
     height:10px;
     border-collapse:separate;
     border-spacing:0px;
     line-height:50px;
-    border: "2";
 }
 
+.ass_tab{
+    width:100px;
+    height:10px;
+    border-collapse:separate;
+    border-spacing:0px;
+    line-height:20px;
 
+}
+.goal_tab{
+    width:100px;
+    height:10px;
+    border-collapse:separate;
+    border-spacing:0px;
+    line-height:20px;
+}
+.mat_tab{
+    width:100px;
+    height:10px;
+    border-collapse:separate;
+    border-spacing:0px;
+    line-height:20px;
+ 
+}
+.detailed_tab{
+    width:150px;
+    height:10px;
+    border-collapse:separate;
+    border-spacing:0px;
+    line-height:50px;
+}
+
+.CR_pos{
+    font-size:30px;
+    margin-left:40px;
+    text-align:left;
+    font-family: 'Black Han Sans', sans-serif;
+    border:1px solid black;
+    width:300px;
+    height:20px;
+}   
+.table_pos{
+    font-size:20px;
+    margin-left:40px;
+    width:300px;
+    height:30px;
+    line-height: 50px;
+    border:1px solid black;
+    border-spacing:0px;
+}
   .juv_img{
-    width:25%;
-    height:40%;
+    width:15%;
+    height:27%;
   }
 
 .content{
@@ -67,12 +121,24 @@
       float: left;
       font-weight: lighter;
 }
+.position_tab{
+    font-size:20px;
+    margin-left:40px;
+    width:300px;
+    height:30px;
+    line-height:50px;
+    border-spacing:0px;
+}
 .CR.set{
       font-size:30px;
       float: left;
       font-weight:300px;
-      margin-left:30px;
+      margin-left:80px;
       text-align:left;
+}
+
+th{
+    border: 1px solid black;
 }
 
 
@@ -175,19 +241,93 @@
 
 
 </table>
+<br></br>
+<br></br>
  
-<table border="1"class="table_juv">
-    <th>최근</th>
-    <th>몰라</th>
-    <th>오오</th>
-    <th>이예</th>
-    <th>생각</th>
+<table class="table">
+    <thead>
+    <tr>
+    <th class="sum_tab">대회명</th>
+    <th class="mat_tab">경기</t>
+    <th class="goal_tab">골</th>
+    <th class="ass_tab">도움</th>
+    <th class="detailed_tab">평점</th>
+    </tr>
+</thead>
+<tbody>
+<tr>
+        <td>UEFA네이션스리그</td>
+        <td>2</td>
+        <td>3</td>
+        <td>0</td>
+        <td>8.4</td>
+    </tr>
+    <tr>
+        <td>세리에A</td>
+        <td>18</td>
+        <td>17</td>
+        <td>2</td>
+        <td>7.88</td>
+    </tr>
+    <tr>
+        <td>챔피언스리그</td>
+        <td>6</td>
+        <td>2</td>
+        <td>0</td>
+        <td>7.32</td>
+    </tr>
+    <tr>
+        <td>유로피안챔피언십</td>
+        <td>8</td>
+        <td>11</td>
+        <td>0</td>
+        <td>7.32</td>
+    </tr>
+    <tr>
+        <td>슈퍼코파</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0 </td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>코파이탈리아</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>FIFA컨페더레이션스컵</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
 </table>
+<p class="position_tab">출전 포지션</p>
+<table class="table_pos">
+    <tr>
+    <td class="CR_pos">포지션</td>
+    <td class="CR_pos">출전</td>
+    <td class="CR_pos">골</td>
+    <td class="CR_pos">도움</td>
+    </tr>
+    <tr>
+        <td class="CR_pos">FW</td>
+        <td class="CR_pos">22</td>
+        <td class="CR_pos">20</td>
+        <td class="CR_pos">1</td>
+        </tr>
+        <tr>
+            <td class="CR_pos">FWL</td>
+            <td class="CR_pos">4</td>
+            <td class="CR_pos">2</td>
+            <td class="CR_pos">1</td>
+            </tr>
+        </tbody>
 
-    
-
-
-
+        </table>
 
 
 

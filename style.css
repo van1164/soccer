@@ -497,9 +497,8 @@ text-align: center;
 td th{
     width: 100px;
 height: 10px;
-border-color: black;
 border-width: 1px;
-border: 1px black;
+
 text-align: left;
 }
 #uefac{
