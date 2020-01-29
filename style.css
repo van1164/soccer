@@ -542,13 +542,13 @@ text-align: left;
 #player_stats{
   float: left;
   margin-left: 30px;
-  height: 800px;
+  height: 200px;
 }
 
 #player_stata{
   float: left;
-  margin-left: 30px;
-  height: 400px;
+  margin-left: 500px;
+  height: 200px;
 }
 
 #px{
@@ -562,6 +562,13 @@ text-align: left;
 #lala{
   width: 40%;
   float: left;
+}
+
+#ppp{
+  width: 400px;
+  height: 400px;
+  margin-left: 670px;
+  margin-top: 280px;
 }
  
 }
