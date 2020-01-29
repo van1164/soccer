@@ -521,10 +521,12 @@ text-align: left;
 }
 #relegation{
   background-color:	#FF4500;
-  color: white;
+
   
 }
-
+#player_stats{
+  float: left;
+}
 
  
 }
