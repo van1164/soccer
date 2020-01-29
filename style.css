@@ -126,7 +126,7 @@ thead{
 tr{border: 1px black; color: black;
 font-size: 20px;
 text-align: center;
-
+background-color: whitesmoke;
 
 }
 td th{
@@ -259,10 +259,13 @@ margin-top: 0;
 
 thead{
 background-color: rgb(100,180,80)
+!important
 }
+
 tr{border: 1px black; color: black;
 font-size: 20px;
 text-align: center;
+background-color: ;
 
 
 }
@@ -493,7 +496,6 @@ tr{
 font-size: 20px;
 text-align: center;
 
-
 }
 td th{
     width: 100px;
@@ -502,6 +504,10 @@ border-width: 1px;
 border-color: white;
 text-align: left;
 }
+
+
+
+
 #uefac{
   background-color: rgb(127, 180, 255)
 }
@@ -523,8 +529,16 @@ text-align: left;
 #relegation{
   background-color:	#FF4500;
 
-  
 }
+#normal{
+  background-color: whitesmoke;
+}
+
+
+#num1_score{
+
+}
+
 #player_stats{
   float: left;
   margin-left: 30px;
