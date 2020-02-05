@@ -78,6 +78,7 @@
   })
   
   function onSignIn(googleUser) {
+  user_name = googleUser.getName()
   var profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
   console.log('Name: ' + profile.getName());
@@ -89,7 +90,10 @@
 }
 
 
+function init(){
 
+
+}
 
 
   </script>
@@ -107,14 +111,15 @@
 
 
 
+<div style="width: 1500px; height:90px;">
+      <a href="https://van1164.github.io/soccer/soccer_home.html" id="logo">해외축구포탈</a>
+        <img src="https://cdn.pixabay.com/photo/2013/07/12/14/09/football-147854__480.png" alt="ball" style="width: 50px; height: 50px; float:inherit;">
+    <button type="button"class="loginBtn--google" style="margin-left: 730px; margin-top: 10px;">Login with Google</button>
+</div>
 
-
-      <a href="https://van1164.github.io/soccer/soccer_home.html"><div id="logo">해외축구포탈
-        <img src="https://cdn.pixabay.com/photo/2013/07/12/14/09/football-147854__480.png" alt="ball" width="50" height="50">
-    </div></a>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
     <div></div> 
-    <sp> </sp>
+    
     <nav id="nav_banner">
         <ul style="margin-left: 9px;">
             <li>
@@ -162,6 +167,8 @@
 <div id="player_stats"></div>
 <div id="player_statsa"></div>
 
+
+<script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
 
     </body>
 </html>
