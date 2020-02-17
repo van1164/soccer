@@ -13,12 +13,12 @@
         <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.8.1.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>-->
-        <script src="script/script.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Caveat|Hanalei|Dancing+Script|Gothic+A1|Nanum+Gothic|Poor+Story|Sunflower:300&display=swap"  rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Geostar&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Bungee+Outline|Geostar|Nanum+Pen+Script|Nunito|Sunflower:300&display=swap" rel="stylesheet">
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <script src="https://apis.google.com/js/api:client.js"></script>
+        
         <meta name="google-signin-client_id" content="752750634047-vip9p36hfcsehog8ai63fvg4jsgel8j6.apps.googleusercontent.com">
     <style>
 
@@ -96,42 +96,26 @@ function init(){
     gapi.load('auth2', function(){
         console.log('auth2')
         gapi.auth2.init({
-            client_id:752750634047-vip9p36hfcsehog8ai63fvg4jsgel8j6.apps.googleusercontent.com
+            client_id:'752750634047-vip9p36hfcsehog8ai63fvg4jsgel8j6.apps.googleusercontent.com'
         })
         gauth.then(function(){
-            console.log('google success');, function(){
-                console.log('googleAuth fail')
+            console.log('google success');
+            if(gauth.isSignedIn.get()){
+              console.log('logined');
+              loginBtn.value = '로그아웃'
+            }else{
+              console.log('logouted');
+              loginBtn.value = '로그인'
             }
+        }, function()
+{
+  console.log('googleAuth fail');
 
-        })
+        });
     });
 }
 
 
-var googleUser = {};
-  var startApp = function() {
-    gapi.load('auth2', function(){
-      // Retrieve the singleton for the GoogleAuth library and set up the client.
-      auth2 = gapi.auth2.init({
-        client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
-        cookiepolicy: 'single_host_origin',
-        // Request scopes in addition to 'profile' and 'email'
-        //scope: 'additional_scope'
-      });
-      attachSignin(document.getElementById('customBtn'));
-    });
-  };
-
-  function attachSignin(element) {
-    console.log(element.id);
-    auth2.attachClickHandler(element, {},
-        function(googleUser) {
-          document.getElementById('name').innerText = "Signed in: " +
-              googleUser.getBasicProfile().getName();
-        }, function(error) {
-          alert(JSON.stringify(error, undefined, 2));
-        });
-  }
 
 
 
@@ -181,7 +165,6 @@ var googleUser = {};
 
 
 
-
 <nav style="margin-left:8px;">
  
   <ul>
@@ -200,6 +183,20 @@ var googleUser = {};
   </ul>  
 
     </nav>
+
+    <div id="mobonDivBanner_251519" style="float: right;"></div>
+    <script type="text/javascript">
+            (function(){var s="251519",w="160px",h="600px",
+            a=document.createElement("script");a.src='//www.mediacategory.com/servlet/adNative?from='+escape(location.href.replace(location.hash,""))+'&s='+s+'&service=cntb&product=w&width='+encodeURI(w)+'&height='+encodeURI(h);a.type="text/javascript";document.getElementsByTagName("head").item(0).appendChild(a)})();
+    </script>
+<div style="float: right;">
+  <script type="text/javascript">
+    (function(cl,i,c,k,m,o,n){m=cl.location.protocol+c;o=cl.referrer;m+='&mon_rf='+encodeURIComponent(o);
+    n='<'+i+' type="text/javascript" src="'+m+'"></'+i+'>';cl.writeln(n);
+    })(document,'script','//tab2.clickmon.co.kr/pop/wp_ad_160_js.php?PopAd=CM_M_1003067%7C%5E%7CCM_A_1070128%7C%5E%7CAdver_M_1046207');
+    </script>
+    </div>
+
 
 <br></br>
 <div id="px"></div>
