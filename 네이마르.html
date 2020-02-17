@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.8.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>-->
+        <script src="script/script.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Caveat|Hanalei|Dancing+Script|Gothic+A1|Nanum+Gothic|Poor+Story|Sunflower:300&display=swap"  rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Geostar&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bungee+Outline|Geostar|Nanum+Pen+Script|Nunito|Sunflower:300&display=swap" rel="stylesheet">
+    <style>
+
+
+  .desc {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  .desc > div {
+    margin: 10px;
+    border-color: black;
+  }
+  .list-checkbox:checked + .title + .desc {
+    max-height: 1000px;
+  }
+  .index{
+      font-size:30px;
+      font-weight:300px;
+      margin-left:30px;
+      float: left;
+  }
+  .ney_img{
+
+    width: 130%;
+    height: 105%;
+
+  }
+.table_juv{
+    margin-left:40px;
+    width:600px;
+    height:30px;
+    border-collapse:separate;
+    border-spacing:0px;
+    line-height:50px;
+}
+.sum_tab{
+    width:450px;
+
+    border:none;
+    line-height:50px;
+}
+
+.ass_tab{
+    width:100px;
+    border-collapse:separate;
+    border-spacing:0px;
+    line-height:20px;
+    border:none;
+}
+.goal_tab{
+    width:100px;
+    height:10px;
+    border-collapse:separate;
+    border-spacing:0px;
+    line-height:20px;
+    border:none;
+}
+.mat_tab{
+    width:100px;
+
+    border-collapse:separate;
+    border-spacing:0px;
+    line-height:20px;
+    border:none;
+ 
+}
+.thead_suq{
+    font-size:small;
+
+}
+.detailed_tab{
+    width:150px;
+
+    border-collapse:separate;
+    border-spacing:0px;
+    line-height:50px;
+    border:none;
+}
+.juv_suq{
+    text-align:right;
+    margin-right:250px;
+    font-size:50px;
+}
+.table_pos{
+    font-size:20px;
+    margin-left:40px;
+    width:300px;
+    height:30px;
+    line-height: 50px;
+    border:1px solid black;
+    border-spacing:0px;
+}
+  .juv_img{
+    width:15%;
+    height:27%;
+  }
+  .juvsquad_img{
+      font-size:30px;
+      margin-right:384px;
+      float:right;
+      width:300px;
+      height:20px;
+      
+  }
+
+.content{
+    text-shadow:0.5px 0.5px 0.5px black;
+    font-size:30px;
+    font-weight:100px;
+      float: left;
+      font-weight: lighter;
+}
+.position_tab{
+    font-size:50px;
+    margin-left:40px;
+    width:300px;
+    height:30px;
+    line-height:50px;
+    border-spacing:0px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.CR.set{
+      font-size:30px;
+      float: left;
+      font-weight:300px;
+      margin-left:80px;
+      text-align:left;
+}
+
+th{
+    border: 1px solid black;
+}
+body{
+    width: 1600px;
+    height: 1500px;
+}
+
+
+    </style>
+<script>
+  $(function(){
+      $("#league_pre:button").on("click",function(){
+          $("#px").load("https://van1164.github.io/soccer/league_stats_pre.html #lala" )
+      })
+  
+  })
+  
+  
+  $(function(){
+      $("#league_la:button").on("click",function(){
+          $("#px").load("https://van1164.github.io/soccer/league_stats_laliga.html #lala" )
+      })
+  
+  })
+  
+  
+  
+  $(function(){
+      $("#league_bun:button").on("click",function(){
+          $("#px").load("https://van1164.github.io/soccer/league_stats_bunde.html #lala" )
+      })
+  
+  })
+  
+  $(function(){
+      $("#league_ser:button").on("click",function(){
+          $("#px").load("https://van1164.github.io/soccer/league_stats_seria.html #lala" )
+      })
+  
+  })
+  
+  
+  
+  </script>
+
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale1.0,user-scalable=no">
+
+
+    <title>해외축구포탈</title>
+    </head>
+
+  
+<body>
+
+
+
+
+
+      <a href="https://van1164.github.io/soccer/soccer_home.html"><div id="logo">해외축구포탈
+        <img src="https://cdn.pixabay.com/photo/2013/07/12/14/09/football-147854__480.png" alt="ball" width="50" height="50">
+    </div></a>
+    <sp> </sp>
+    <nav id="nav_banner">
+        <ul style="margin-left: 9px;">
+            <li>
+                <a  class="ban" href="https://van1164.github.io/soccer/league_stats.html">리그정보</a>
+            </li>
+            <li>
+                <a style="background-color: rgb(140,220,100)" class="ban" href="https://van1164.github.io/soccer/player_stats.html">선수정보</a>
+            </li>
+            <li>
+                <a class="ban" href="https://van1164.github.io/soccer/커뮤니티">커뮤니티</a>
+            </li>
+            <li>
+                <a class="ban" href="https://van1164.github.io/soccer/베팅">가상베팅</a>
+            </li>
+        </ul>
+    </nav>
+
+<br></br>
+<br></br>
+<div style="margin-left:40px; width: 50%; height:160px; margin-right:0px; float: left;">
+<table style="width:800px; height: 160px; float: left;">
+<tr>
+    <th rowspan="3" style="width: 110px; height: 150px; border: none;;"><img src="https://van1164.github.io/soccer/player_img/네이마르.png" class="ney_img"></th>
+    <td>이름:</td>
+    <td>네이마르<br>(Neymar)</td>
+    <td> &emsp; 소속팀:</td>
+    <td><img src="https://van1164.github.io/soccer/team_img/psg.png"class="juv_img">PSG</td>
+</tr>
+<tr>
+    <td>나이: </td>
+    <td>28 (1992.2.5) </td>
+    <td>키:</td>
+    <td>175cm</td>
+</tr>
+<tr>
+    <td>국적:</td>
+    <td>브라질</td>
+    <td>포지션:</td>
+    <td>미드필더</td>
+</tr>
+
+</table>
+</div>
+
+
+<div class="juvsquad_img"><img src="https://van1164.github.io/soccer/team_img/psg.png" style="width:47px; height:45px;">PSG 스쿼드</div>
+<br><br>
+<div id="아스날"style="margin-top: 20px; width: 300px;float:right; margin-right: 350px;">
+<table style="width: 300px;">
+   <thead style="border: none;">
+    <tr>
+    <th class="thead_suq" style="border: none;">선수명</th>
+    <th class="thead_suq" style="border: none;">포지션</th>
+</thead>
+    <tbody>
+    <tr id="normal">
+        <td class="thead_suq">세르히오 리코</td class="thead_suq">
+        <td class="thead_suq">골키퍼</td>
+    </tr>
+    <tr id="normal">
+        <td class="thead_suq">케일러 나바스</td class="thead_suq">
+        <td class="thead_suq">골키퍼</td class="thead_suq">
+    </tr>
+    <tr id="normal">
+        <td class="thead_suq">마르친 불카</td class="thead_suq">
+        <td class="thead_suq">골키퍼</td class="thead_suq">
+    </tr>
+    <tr id="normal">
+        <td class="thead_suq">티아구 실바</td class="thead_suq">
+        <td class="thead_suq">수비수</td class="thead_suq">
+    </tr>
+    <tr id="normal">
+        <td class="thead_suq">프레스넬 킴펨베</td class="thead_suq">
+        <td class="thead_suq">수비수</td class="thead_suq">
+    </tr>
+    <tr id="normal">
+        <td class="thead_suq">압두 디알루</td class="thead_suq">
+        <td class="thead_suq">수비수</td class="thead_suq">
+    </tr>
+    <tr id="normal">   
+        <td class="thead_suq">니앙주 코와시</td class="thead_suq">
+        <td class="thead_suq">수비수</td>
+    </tr>
+    <tr id="normal">  
+        <td class="thead_suq">마르퀴뇨스</td class="thead_suq">
+        <td class="thead_suq">수비수</td class="thead_suq">
+    </tr>
+    <tr id="normal">  
+        <td class="thead_suq">후안 베르바트</td class="thead_suq">
+        <td class="thead_suq">수비수</td class="thead_suq">
+    </tr>
+    <tr id="normal">  
+        <td class="thead_suq">라이빈 쿠르자와</td class="thead_suq">
+        <td class="thead_suq">수비수</td class="thead_suq">
+    </tr>
+    <tr id="normal">  
+        <td class="thead_suq">토마 뫼니에</td class="thead_suq">
+        <td class="thead_suq">수비수</td class="thead_suq">
+    </tr>
+    <tr id="normal">  
+        <td class="thead_suq">미첼 바커</td class="thead_suq">
+        <td class="thead_suq">수비수</td class="thead_suq">
+    </tr>
+    <tr id="normal">  
+        <td class="thead_suq">파블로 사라비아</td class="thead_suq">
+        <td class="thead_suq">수비수</td class="thead_suq">
+    </tr>
+    <tr id="normal">  
+        <td class="thead_suq">틸로 케러</td class="thead_suq">
+        <td class="thead_suq">수비수</td class="thead_suq">
+    </tr>
+    <tr id="normal">  
+        <td class="thead_suq">레안드로 파레데스</td class="thead_suq">
+        <td class="thead_suq">미드필더</td class="thead_suq">
+    </tr>
+    <tr id="normal">  
+        <td class="thead_suq">로익 음베 소</td class="thead_suq">
+        <td class="thead_suq">미드필더</td class="thead_suq">
+    </tr>
+    <tr id="normal">  
+        <td class="thead_suq">이드리사 게예</td class="thead_suq">
+        <td class="thead_suq">미드필더</td class="thead_suq">
+    </tr>
+    <tr id="normal">  
+        <td class="thead_suq">아딜 아우치제</td class="thead_suq">
+        <td class="thead_suq">미드필더</td class="thead_suq">
+    </tr>
+    <tr id="normal">  
+        <td class="thead_suq">쥴리안 드락슬러</td class="thead_suq">
+        <td class="thead_suq">미드필더</td class="thead_suq">
+    </tr>
+    <tr id="normal">  
+        <td class="thead_suq">앙헬 디 마리아</td class="thead_suq">
+        <td class="thead_suq">미드필더</td class="thead_suq">
+    </tr>
+    <tr id="normal" style="background-color: rgb(102, 209, 111);">  
+        <td class="thead_suq">네이마르</td class="thead_suq">
+        <td class="thead_suq">미드필더</td class="thead_suq">
+    </tr>
+    <tr id="normal">  
+        <td class="thead_suq">킬리안 음바페</td class="thead_suq">
+        <td class="thead_suq">공격수</td class="thead_suq">
+    </tr>
+    <tr id="normal">  
+        <td class="thead_suq">에릭 막심 추포-모팅</td class="thead_suq">
+        <td class="thead_suq">공격수</td class="thead_suq">
+    </tr>
+    <tr id="normal">
+        <td class="thead_suq">에디손 카바니</td class="thead_suq">
+        <td class="thead_suq">공격수</td class="thead_suq">
+    </tr>
+    <tr id="normal">  
+        <td class="thead_suq">마우로 이카르디</td class="thead_suq">
+        <td class="thead_suq">공격수</td class="thead_suq">
+    </tr>
+    </tbody>
+</table>
+</div>
+<div style="float: left; margin-left: 40px; position: relative;">
+<table class="table">
+    <thead>
+    <th style="border:none;">대회명</th>
+    <th style="border:none;">경기</th>
+    <th style="border:none;">골</th>
+    <th style="border:none;">도움</th>
+    <th style="border:none;">평점</th>
+    </tr>
+</thead>
+<tbody>
+<tr id="normal">
+        <td>리그 1</td>
+        <td>14</td>
+        <td>13</td>
+        <td>6</td>
+        <td>8.66</td>
+    </tr>
+    <tr id="normal">
+        <td>챔피언스리그</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>8.38</td>
+    </tr>
+    <tr id="normal">
+        <td>쿠프 데 라 리그</td>
+        <td>2</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr id="normal">
+        <td>국제 친선경기</td>
+        <td>4</td>
+        <td>1</td>
+        <td>0 </td>
+        <td>0</td>
+    </tr>
+</table>
+<div>
+<p class="position_tab">출전 포지션</p>
+<table class="table">
+    <thead>
+    <tr>
+    <td>포지션</td>
+    <td>출전</td>
+    <td>골</td>
+    <td>도움</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr id="normal">
+        <td>공격형 미드필더(중앙)</td>
+        <td>9</td>
+        <td>10</td>
+        <td>8</td>
+        </tr>
+        <tr id="normal">
+            <td>공격수(중앙)</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr id="normal">
+            <td>공격수(왼쪽)</td>
+            <td>5</td>
+            <td>3</td>
+            <td>0</td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+
+
+
+</body>
+</html>
