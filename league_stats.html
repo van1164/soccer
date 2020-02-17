@@ -19,6 +19,7 @@
         <link href="https://fonts.googleapis.com/css?family=Bungee+Outline|Geostar|Nanum+Pen+Script|Nunito|Sunflower:300&display=swap" rel="stylesheet">
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <script src="https://apis.google.com/js/api:client.js"></script>
+        
         <meta name="google-signin-client_id" content="752750634047-vip9p36hfcsehog8ai63fvg4jsgel8j6.apps.googleusercontent.com">
     <style>
 
@@ -99,7 +100,7 @@ function init(){
             client_id:752750634047-vip9p36hfcsehog8ai63fvg4jsgel8j6.apps.googleusercontent.com
         })
         gauth.then(function(){
-            console.log('google success');, function(){
+            console.log('google success'), function(){
                 console.log('googleAuth fail')
             }
 
@@ -132,6 +133,11 @@ var googleUser = {};
           alert(JSON.stringify(error, undefined, 2));
         });
   }
+
+
+	if (/android|webos|iphone|ipad|ipod|blackberry|windows phone/i.test(navigator.userAgent))
+	{(function(){document.writeln(' 모바일용 아이프레임 방식 스크립트 삽입 ');})();}
+	else{(function(){document.writeln(' 웹용 아이프레임 방식 스크립트 삽입 ');})();}
 
 
 
