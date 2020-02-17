@@ -94,8 +94,16 @@
 function init(){
     console.log('init')
     gapi.load('auth2', function(){
-        console.load('auth2')
+        console.log('auth2')
+        gapi.auth2.init({
+            client_id:752750634047-vip9p36hfcsehog8ai63fvg4jsgel8j6.apps.googleusercontent.com
+        })
+        gauth.then(function(){
+            console.log('google success');, function(){
+                console.log('googleAuth fail')
+            }
 
+        })
     });
 }
 
