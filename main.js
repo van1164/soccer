@@ -1,99 +1,398 @@
-
-<!DOCTYPE html>
+var http = require('http');
+var fs = require('fs');
+var url = require('url');
+ 
+var app = http.createServer(function(request,response){
+    var _url = request.url;
+    var queryData = url.parse(_url, true).query;
+    var title = queryData.id;
+    if(_url == '/'){
+      title = 'Welcome';
+    }
+    if(_url == '/favicon.ico'){
+      return response.writeHead(404);
+    }
+    response.writeHead(200);
+    var template = `
+    <!DOCTYPE html>
 <html>
-    <head>
-
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-        <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="https://code.jquery.com/jquery-1.8.1.min.js"></script>
-        <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>-->
-        <link href="https://fonts.googleapis.com/css?family=Caveat|Hanalei|Dancing+Script|Gothic+A1|Nanum+Gothic|Poor+Story|Sunflower:300&display=swap"  rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Geostar&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Bungee+Outline|Geostar|Nanum+Pen+Script|Nunito|Sunflower:300&display=swap" rel="stylesheet">
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <script src="https://apis.google.com/js/api:client.js"></script>
-        
-        <meta name="google-signin-client_id" content="752750634047-vip9p36hfcsehog8ai63fvg4jsgel8j6.apps.googleusercontent.com">
-    <style>
 
 
-  .desc {
-    max-height: 0;
-    overflow: hidden;
-    transition: 0.5s;
+
+
+<head>
+    
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.8.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>-->
+<link href="https://fonts.googleapis.com/css?family=Caveat|Hanalei|Dancing+Script|Gothic+A1|Nanum+Gothic|Poor+Story|Sunflower:300&display=swap"  rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Geostar&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Bungee+Outline|Geostar|Nanum+Pen+Script|Nunito|Sunflower:300&display=swap" rel="stylesheet">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://apis.google.com/js/api:client.js"></script>
+
+<meta name="google-signin-client_id" content="752750634047-vip9p36hfcsehog8ai63fvg4jsgel8j6.apps.googleusercontent.com">
+
+
+
+<title>${title}</title>
+
+<style>
+body{
+    background-color: white;
+    margin-left: 3%;
+    margin-top: 3%;
+    width: 1800px;
+}
+
+
+.loginBtn--google:focus {
+  outline: none;
+}
+.loginBtn--google:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+#loginBtn--google {
+  /*font-family: "Roboto", Roboto, arial, sans-serif;*/
+  background: #DD4B39;
+  float: inherit;
+  height: 36px;
+  margin-left: 800px;
+  margin-top: 60px;
+  box-sizing: border-box;
+  position: relative;
+  /* width: 13em;  - apply for fixed size */
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #FFF;
+
+}
+#loginBtn--google:before {
+  border-right: #BB3F30 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+#loginBtn--google:hover,
+#loginBtn--google:focus {
+  background: #E74B37;
+}
+
+
+
+.login_button{
+
+background-color: white;
+height: 50px;
+margin-left: 500px;
+}
+
+a:visited{
+  text-decoration: none;
+  color: rgb(120,120,120);
+}
+a:link{
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  color: rgb(120,120,120);
+}
+
+
+#logo{
+    text-align: left;
+    font-size: 70px;
+    color: black;
+    width: auto;
+    line-height: 1.8;
+    font-family: 'Nanum Pen Script', cursive;
+    margin-left:35px;
+    height: 55px;
+    float: inline-start;
+
+
+}
+
+#nav_banner ul li{
+    list-style: none;
+    float: left;
+    border: 1 solid rgb(255,255,255);
+    text-align: center;
+    line-height: 2;
+    font-size:20px;
+    color: rgb(90,200,100);
+    text-decoration: none;
+    width: 300px;
+    height: 30px;
+}
+
+#nav_banner .ban{
+    text-decoration: none;
+    color: black;
+    line-height: 2;
+    background-color: rgb(100,180,80);
+    font-family: 'Gothic A1', Courier, monospace;
+    display: block;
+
+}
+#nav_banner .ban:hover{
+  line-height: 2;
+    background-color: rgb(140,220,100);
+
+}
+
+#p1{font-size: 35px;
+    text-align: left;
+    margin-left: 0px;
+    margin-top: 10px;
+    font-family: 'Poor story', cursive;
+    }
+
+#p2{color: black;
+  line-height: 2;
+  position: static;
+  text-align: center;
+  font-family: 'Gothic A1', Courier, monospace;
+  font-size: 22px;
   }
-  .desc > div {
-    margin: 10px;
-    border-color: black;
+
+
+.checkbox {
+display: none;
+}
+
+.checkbox:checked + .title + .desc {
+max-height: 1000px;
+}
+
+.list {
+list-style: none;
+padding: 0;
+}
+.list > li {
+padding: 0;
+}
+.list-checkbox {
+display: none;
+}
+.title {
+font-size: 22px;
+padding: 10px;
+margin: 0;
+border-top: 1px solid #ddd;
+background: #f4f4f4;
+cursor: pointer;
+display: block;
+}
+
+
+
+.league-list {
+list-style-type: none;
+list-style: none;
+border: black 1px;
+width: 100%;
+margin: 0px;
+line-height: 2;
+}
+
+
+
+#league_pre{font-size: 25px;
+text-align: left;
+margin-left: 0px;
+height: 80px;
+font-family: 'Poor story', cursive;
+width: 270px;
+background-color: white;
+float: left;
+}
+
+#league_la{font-size: 25px;
+text-align: left;
+margin-left: 0px;
+height: 80px;
+font-family: 'Poor story', cursive;
+width: 230px;
+background-color: white;
+float: left;
+}
+
+#league_bun{font-size: 25px;
+  text-align: left;
+  margin-left: 0px;
+  height: 80px;
+  font-family: 'Poor story', cursive;
+  width: 270px;
+  background-color: white;
+  float: left;
   }
-  .list-checkbox:checked + .title + .desc {
-    max-height: 1000px;
-  }
 
-    </style>
-<script>
-  $(function(){
-      $("#league_pre:button").on("click",function(){
-          $("#px").load("https://van1164.github.io/soccer/league_stats_pre.html #lala" )
-          $("#player_stats").load("https://van1164.github.io/soccer/league_stats_pre.html #papa" )
-          $("#player_statsa").load("https://van1164.github.io/soccer/league_stats_pre.html #ppp" )
-      })
-  
-  })
-  
-  
-  $(function(){
-      $("#league_la:button").on("click",function(){
-          $("#px").load("https://van1164.github.io/soccer/league_stats_laliga.html #lala" )
-          $("#player_stats").load("https://van1164.github.io/soccer/league_stats_laliga.html #papa" )
-          $("#player_statsa").load("https://van1164.github.io/soccer/league_stats_laliga.html #ppp" )
-      })
-  
-  })
-  
-  
-  
-  $(function(){
-      $("#league_bun:button").on("click",function(){
-          $("#px").load("https://van1164.github.io/soccer/league_stats_bunde.html #lala" )
-          $("#player_stats").load("https://van1164.github.io/soccer/league_stats_laliga.html #papa" )
-          $("#player_statsa").load("https://van1164.github.io/soccer/league_stats_laliga.html #ppp" )
-      })
-  
-  })
-  
-  $(function(){
-      $("#league_ser:button").on("click",function(){
-          $("#px").load("https://van1164.github.io/soccer/league_stats_seria.html #lala" )
-          $("#player_stats").load("https://van1164.github.io/soccer/league_stats_laliga.html #papa" )
-          $("#player_statsa").load("https://van1164.github.io/soccer/league_stats_laliga.html #ppp" )
+#league_ser{font-size: 25px;
+    text-align: left;
+    margin-left: 0px;
+    height: 80px;
+    font-family: 'Poor story', cursive;
+    width: 230px;
+    background-color: white;
+    }
 
-      })
-  
-  })
+#league button:hover{
+background-color: rgb(90,200,100);
+}
+#px{
+margin-left: 50px;
+
+}
+
+#table_top{
+font-size: 35px;
+text-align: left;
+font-family: 'Poor story', cursive;
+width: fit-content;
+}
+
+#table_top_laliga{
+font-size: 35px;
+text-align: left;
+font-family: 'Poor story', cursive;
+}
+
+#table_top_bun{
+font-size: 35px;
+text-align: left;
+font-family: 'Poor story', cursive;
+}
+
+#table_top_ser{
+font-size: 35px;
+text-align: left;
+font-family: 'Poor story', cursive;
+}
+#pp{
+margin: auto;
+}
+
+table{
+margin-left: 0px;
+width: 600px;
+}
+#right{
+height: 700px;
+width: 400px;
+margin-left: 598px;
+margin-top: 0;
+
+}
+
+thead{
+background-color: rgb(100,180,80)
+}
+tr{
+font-size: 20px;
+text-align: center;
+
+}
+td th{
+width: 100px;
+height: 10px;
+border-width: 1px;
+border-color: white;
+text-align: left;
+}
 
 
 
 
-console.log(request.url);
+#uefac{
+background-color: rgb(127, 180, 255)
+}
+#uefac2{
+background-color: rgb(127, 200, 255)
+}
+#uefac3{
+background-color: rgb(127, 220, 255)
+}
+#uefac4{
+background-color: rgb(127, 230, 255)
+}
+#uefau{
+background-color: 	#FFA500;
+}
+#uefau2{
+background-color: 	#FF8C00;
+}
+#relegation{
+background-color:	#FF4500;
+
+}
+#normal{
+background-color: whitesmoke;
+}
+
+
+#num1_score{
+
+}
+
+#player_stats{
+float: left;
+margin-left: 30px;
+height: 200px;
+}
+
+#player_stata{
+float: left;
+margin-left: 500px;
+height: 200px;
+}
+
+#px{
+width: 80%;
+}
+#papa{
+width: 400px;
+height: 400px;
+
+}
+#lala{
+width: 40%;
+float: left;
+}
+
+#ppp{
+width: 400px;
+height: 400px;
+margin-left: 670px;
+margin-top: 280px;
+}
+
+
+</style>
 
 
 
-var title = '해축구포탈'
-  </script>
 
-
-
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale1.0,user-scalable=no">
-
-
-    <title>${title}</title>
     </head>
 
     <body>
@@ -162,3 +461,8 @@ var title = '해축구포탈'
 
     </body>
 </html>
+    `;
+    response.end(template);
+ 
+});
+app.listen(3000);

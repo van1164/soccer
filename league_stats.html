@@ -77,47 +77,11 @@
       })
   
   })
-  
-  function onSignIn(googleUser) {
-  user_name = googleUser.getName()
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-
-  var id_token = googleUser.getAuthResponse().id_token;
-        console.log("ID Token: " + id_token); 
-}
-
-
-function init(){
-    console.log('init')
-    gapi.load('auth2', function(){
-        console.log('auth2')
-        gapi.auth2.init({
-            client_id:'752750634047-vip9p36hfcsehog8ai63fvg4jsgel8j6.apps.googleusercontent.com'
-        })
-        gauth.then(function(){
-            console.log('google success');
-            if(gauth.isSignedIn.get()){
-              console.log('logined');
-              loginBtn.value = '로그아웃'
-            }else{
-              console.log('logouted');
-              loginBtn.value = '로그인'
-            }
-        }, function()
-{
-  console.log('googleAuth fail');
-
-        });
-    });
-}
 
 
 
 
+console.log(request.url);
 
 
   </script>
